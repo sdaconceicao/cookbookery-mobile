@@ -3,15 +3,17 @@ import {Text} from 'react-native';
 import {IntlProvider} from 'react-intl';
 
 import {enMessages as sharedEnMessages} from 'cookbookery-shared';
+import {enMessages} from 'Translations';
 
-import Screens from './screens';
-import * as enMessages from './translations/en';
+import Screens from 'Screens';
 
 export default class App extends Component {
 
     render() {
         return (
-            <IntlProvider locale="en" messages={Object.assign(enMessages, sharedEnMessages)} textComponent={Text}>
+            <IntlProvider locale="en"
+                textComponent={Text}
+                messages={Object.assign(enMessages, sharedEnMessages)} >
                 <Screens/>
             </IntlProvider>
         );

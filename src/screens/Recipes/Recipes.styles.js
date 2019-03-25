@@ -7,6 +7,9 @@ export default StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#efefef',
     },
+    list: {
+        width: '100%'
+    },
     none: {
         color: 'red'
     }

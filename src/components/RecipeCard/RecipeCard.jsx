@@ -9,7 +9,8 @@ export const RecipeCard = (props) => {
     return (
         <View style={styles.wrapper} {...props} >
             <View style={styles.content}>
-                <ImageBackground source={{uri:image}} style={styles.image}/>
+                <ImageBackground source={image ? {uri:image} : require('Assets/img/placeholder.png')}
+                                 style={styles.image}/>
                 <Text style={styles.title}>{title}</Text>
             </View>
         </View>

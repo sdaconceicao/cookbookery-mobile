@@ -13,6 +13,10 @@ export class Recipes extends Component {
         loading: true
     };
 
+    static navigationOptions = ({ screenProps }) => ({
+        title: screenProps.intl.formatMessage({ id: 'recipes.title' }),
+    });
+
     componentDidMount(){
         RecipeApi.getList()
             .then(response=>{
